@@ -1,0 +1,949 @@
+/*
+Theme Name: OrangeGlass
+Theme URI: http://milanmarijanovic.com
+Author: Milan Marijanovic
+Author URI: http://milanmarijanovic.com
+Description: Awesome theme
+Version: 1.0
+*/
+
+/* font-family: 'Alegreya SC', serif;
+   font-family: 'Montserrat', sans-serif;
+   font-family: 'Open Sans', sans-serif;
+   font-family: 'Varela Round', sans-serif; */
+
+/* === GENERAL ================================== */
+
+body {
+    margin: 0
+}
+
+/* JS loader */
+
+.no-js #loader {
+    display: none;
+}
+
+.js #loader {
+    display: block;
+    position: absolute;
+    left: 100px;
+    top: 0;
+}
+
+.se-pre-con {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background: url(./img/preloader_2.gif) center no-repeat #fff;
+}
+
+/* Overlay fullscreen menu */
+
+#overlay-menu {
+    background-color: rgba(0, 0, 0, 0.9);
+    height: 100vh;
+    width: 100vw;
+    left: -300vh;
+    position: absolute;
+    color: #fff;
+    -webkit-transition: 0.5s ease-in-out;
+    -moz-transition: 0.5s ease-in-out;
+    -o-transition: 0.5s ease-in-out;
+    transition: 0.5s ease-in-out;
+}
+
+/* Overlay fullscreen nav links */
+
+#overlay-menu a {
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3300;
+    display: block;
+    font-size: 30px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Fullscreen nav hover and focus */
+
+#overlay-menu a:hover,
+#overlay-menu a:focus {
+    color: #fff;
+}
+
+#overlay-menu ul {
+    list-style-type: none;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#overlay-menu ul li {
+    margin-bottom: 20px;
+}
+
+#overlay-menu.slide {
+    left: 0;
+    position: fixed;
+    overflow: hidden;
+}
+
+/* Fullscreen nav content */
+
+.overlay-menu {
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    top: 25%;
+    width: 100%;
+}
+
+/* overlay fullscreen menu close button */
+
+#close {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    top: 30px;
+    right: 30px;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+    color: #ff3300;
+    font-size: 60px;
+    padding: 10px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+/* Github icon overlay menu */
+
+.github {
+    bottom: 30px;
+    right: 30px;
+    position: absolute
+}
+
+/* Sandwich menu */
+
+.menu1,
+.menu2,
+.menu3 {
+    border-top: 1px solid #f30;
+    border-bottom: 1px solid #f30;
+    height: 6px;
+    margin: 6px;
+    width: 35px
+}
+
+/* Sendwich menu 3 bars */
+
+#menu-toggle {
+    cursor: pointer;
+    height: 45px;
+    margin: 3% 3%;
+    padding: 2px 2px 1px 2px;
+    position: fixed;
+    width: 50px;
+}
+
+/* Overlay fullscreen menu - active link */
+
+.active-href {
+    font-weight: 900;
+    text-transform: uppercase
+}
+
+/* Background cover */
+
+.body {
+    height: 100vh;
+    overflow: hidden;
+    position: absolute;
+    width: 100vw;
+    z-index: -3
+}
+
+/* Background cover with opacity */
+
+.now {
+    background: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid #000;
+    height: 98.5vh;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    width: 99vw;
+    z-index: -1
+}
+
+/* === HOME PAGE ===============================*/
+
+/* Background image */
+
+.cover-img {
+    background-size: cover;
+    max-width: 120%;
+    min-height: 100%;
+    overflow: hidden;
+    position: absolute;
+    z-index: -3
+}
+
+/* Landing page icons animate */
+
+#icon-1,
+#icon-2 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 5px;
+    z-index: -2
+}
+
+#icon-11,
+#icon-12 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 205px;
+    z-index: -2
+}
+
+#icon-21,
+#icon-22 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 505px;
+    z-index: -2
+}
+
+#icon-31,
+#icon-32 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 405px;
+    z-index: -2
+}
+
+#icon-41,
+#icon-42 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 100px;
+    z-index: -2
+}
+
+#icon-51,
+#icon-52 {
+    bottom: 1vh;
+    display: none;
+    position: absolute;
+    right: 305px;
+    z-index: -2
+}
+
+/* My name */
+
+#name {
+    color: #fff;
+    font-family: 'Alegreya SC', serif;
+    position: absolute;
+    right: 50%;
+    top: 27px
+}
+
+/* Landing page text container */
+
+#main-text {
+    color: #fff;
+    float: left;
+    left: 10%;
+    margin-top: 35vh
+}
+
+#main-text h1 {
+    font-family: Montserrat, sans-serif;
+    font-size: 50px
+}
+
+#main-text h3 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px
+}
+
+#land {
+    position: absolute;
+    left: 0;
+    top: 100px
+}
+
+/* Landing page main text - animate */
+
+#main-animate {
+    color: #f30;
+    font-size: 40px
+}
+
+/* === PORTFOLIO PAGE ============================== */
+
+/* Portfolio link images */
+
+.container-image-a,
+.container-image-b,
+.container-image-c,
+.container-image-d,
+.container-image-e {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 200px;
+    left: -1500px;
+    margin: 10px;
+    position: relative;
+    width: 200px
+}
+
+/* Portfolio background - trasparent */
+
+.layer-a,
+.layer-b,
+.layer-c,
+.layer-d,
+.layer-e {
+    background-color: #000;
+    border: 2px solid #f30;
+    border-radius: 50%;
+    box-shadow: 0 0 2px 2px #f30;
+    height: 100%;
+    opacity: .8;
+    width: 100%
+}
+
+/* Name logo */
+
+.name {
+    font-family: 'Alegreya SC', serif;
+    position: absolute;
+    top: 3%;
+    right: 25px;
+    z-index: 99
+}
+
+.name h3 {
+    color: #fff;
+    text-decoration: none;
+    padding-top: 5px
+}
+
+.name h3 span:hover {
+    color: #f30
+}
+
+.name a:hover {
+    text-decoration: none
+}
+
+/* Name border logo */
+
+.name-border {
+    height: 90px;
+    position: absolute;
+    right: 14px;
+    top: 20px;
+    width: 270px
+}
+
+.top-border {
+    border-top: 1px solid #f30;
+    width: 25%
+}
+
+.bottom-border {
+    bottom: 0;
+    border-bottom: 1px solid #f30;
+    right: 0;
+    position: absolute;
+    width: 25%
+}
+
+/* === ABOUT PAGE ================================= */
+
+/* Text on the left side of the screen */
+
+.about-left {
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 18px;
+    height: 250px;
+    left: -1500px;
+    padding: 50px;
+    position: absolute;
+    text-align: center;
+    top: 125px;
+    width: 800px
+}
+
+/* Text on the right side of the screen */
+
+.about-right {
+    bottom: 125px;
+    color: #fff;
+    font-family: 'Varela Round', sans-serif;
+    height: 250px;
+    text-align: center;
+    font-size: 18px;
+    padding: 50px;
+    position: absolute;
+    right: -1500px;
+    width: 800px
+}
+
+.about-left h3,
+.about-right h3 {
+    color: #f30;
+    font-family: Montserrat, sans-serif
+}
+
+.text-center h2 {
+    color: #fff;
+    font-family: Montserrat, sans-serif
+}
+
+.text-center h3 {
+    color: #fff;
+    font-family: 'Alegreya SC', serif;
+    margin-bottom: 15vh
+}
+
+/* Portfolio container */
+
+.portfolio {
+    height: 80%;
+    margin-top: 100px;
+    padding-bottom: 100px;
+    width: 90%
+}
+
+/* Transparent layers on web links images */
+
+.layer-a {
+    margin-left: -1px
+}
+
+.layer-c {
+    margin-left: -1px
+}
+
+.layer-a h4,
+.layer-b h4,
+.layer-c h4,
+.layer-d h4,
+.layer-e h4 {
+    color: #fff;
+    font-family: Montserrat, sans-serif;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    font-size: 18px;
+    padding-top: 30%
+}
+
+.layer-a h4:hover,
+.layer-b h4:hover,
+.layer-c h4:hover,
+.layer-d h4:hover,
+.layer-e h4:hover {
+    color: #f30;
+    transition-duration: .3s;
+    transition-timing-function: ease-in-out
+}
+
+/* Images on web links */
+
+.container-image-a {
+    background-image: url(./img/img22.png)
+}
+
+.container-image-b {
+    background-image: url(./img/img23.png)
+}
+
+.container-image-c {
+    background-image: url(./img/img24.png)
+}
+
+.container-image-d {
+    background-image: url(./img/img25.png)
+}
+
+.container-image-e {
+    background-image: url(./img/img26.png)
+}
+
+/* === CONTACT PAGE ==================================*/
+
+/* Top text */
+
+.contact-top {
+    font-family: Montserrat, sans-serif;
+    text-align: center;
+    top: 10vh;
+    color: #fff;
+}
+
+/* Contact left side screen */
+
+.contact-left {
+    width: 50%;
+    position: relative;
+    top: 20vh;
+    z-index: 4;
+    text-align: center;
+    color: #fff;
+    padding-bottom: 10px;
+    padding-top: 25px;
+    font-size: 20px
+}
+
+.contact-left p {
+    color: #f30;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 22px;
+    font-weight: 400
+}
+
+.contact-left a {
+    color: #f30;
+    text-decoration: none
+}
+
+.contact-left a:hover {
+    color: #fff
+}
+
+/* Contact right side screen */
+
+.contact-right {
+    color: #f30;
+    font-family: 'Open Sans', sans-serif;
+    position: relative;
+    top: 30vh;
+    text-align: center;
+}
+
+.contact-right h4 {
+    color: #fff;
+}
+
+/* Div in contact right */
+
+#city {
+    width: 100%;
+}
+
+/* === FOOTER ========================================= */
+
+.rights {
+    bottom: 2vh;
+    color: #fff;
+    margin: 5px;
+    right: 5%;
+    position: absolute;
+    text-align: center
+}
+
+/* === MEDIA SCREENS ==================================*/
+
+/* Max-width 1400px */
+
+@media screen and (max-width: 1400px) {
+    .container-image-a,
+    .container-image-b,
+    .container-image-c,
+    .container-image-d,
+    .container-image-e {
+        height: 150px;
+        width: 150px;
+        margin: 20px 4px
+    }
+    .layer-a h4,
+    .layer-b h4,
+    .layer-c h4,
+    .layer-d h4,
+    .layer-e h4 {
+        font-size: 16px;
+        padding-top: 20%
+    }
+}
+
+/* Max-width 1024px */
+
+@media screen and (max-width:1024px) {
+    .port-work {
+        margin-bottom: 10%
+    }
+    .container-image-a,
+    .container-image-b,
+    .container-image-c,
+    .container-image-d,
+    .container-image-e {
+        height: 200px;
+        width: 200px;
+        margin: 20px 2px
+    }
+    .contact-left {
+        top: 10vh
+    }
+    .text-center h3 {
+        margin-bottom: 15px
+    }
+    #main-text h1 {
+        font-size: 20px
+    }
+    #main-text h3 {
+        font-size: 16px
+    }
+    #main-text {
+        margin-top: 20vh
+    }
+    #main-animate {
+        font-size: 18px
+    }
+    .contact-left {
+        top: 25vh
+    }
+    .contact-left p {
+        font-size: 12px
+    }
+    .name {
+        right: 15px
+    }
+    .portfolio {
+        margin-top: 75px
+    }
+    #icon-1 img,
+    #icon-11 img,
+    #icon-12 img,
+    #icon-2 img {
+        height: 25px;
+        width: 25px
+    }
+    #icon-21 img,
+    #icon-22 img {
+        height: 25px;
+        width: 25px
+    }
+    #icon-31 img,
+    #icon-32 img {
+        height: 25px;
+        width: 25px
+    }
+    #icon-41 img,
+    #icon-42 img {
+        height: 25px;
+        width: 25px
+    }
+    #icon-51 img,
+    #icon-52 img {
+        height: 25px;
+        width: 25px
+    }
+    #icon-1,
+    #icon-2 {
+        right: 5px
+    }
+    #icon-11,
+    #icon-12 {
+        right: 95px
+    }
+    #icon-21,
+    #icon-22 {
+        right: 155px
+    }
+    #icon-31,
+    #icon-32 {
+        right: 125px
+    }
+    #icon-41,
+    #icon-42 {
+        right: 35px
+    }
+    #icon-51,
+    #icon-52 {
+        right: 65px
+    }
+}
+
+/* Max-width 992px */
+
+@media screen and (max-width:960px) {
+    .about-left {
+        top: 100px;
+        width: 500px
+    }
+    .about-right {
+        bottom: 100px;
+        width: 500px
+    }
+    .contact-left {
+        width: 100%;
+        top: 25vh
+    }
+}
+
+/* Max-width 768px */
+
+@media screen and (max-width:768px) {
+    #main-text {
+        width: 70vw
+    }
+    #name {
+        font-size: 16px
+    }
+    .name-border {
+        height: 70px;
+        width: 165px;
+        right: 16px
+    }
+    .name h3 {
+        font-size: 16px
+    }
+    #overlay-menu a {
+        font-size: 20px;
+        padding: 2px;
+    }
+    #close {
+        font-size: 40px;
+        right: 35px;
+        top: 15px
+    }
+    .menu1,
+    .menu2,
+    .menu3 {
+        width: 30px;
+        margin: 3px;
+        height: 5px;
+    }
+    #menu-toggle {
+        margin: 5% 5%;
+    }
+    .github img {
+        height: 20px;
+        width: 20px
+    }
+    #menu-toggle {
+        height: 25px;
+        width: 30px;
+    }
+    .about-left {
+        height: 40vh;
+        padding: 8px;
+        top: 70px;
+        width: 100vw
+    }
+    .about-left h3 {
+        font-size: 16px
+    }
+    .about-left p {
+        font-size: 14px
+    }
+    .about-right {
+        bottom: 0;
+        height: 40vh;
+        padding: 8px;
+        width: 100vw
+    }
+    .about-right h3 {
+        font-size: 16px
+    }
+    .about-right p {
+        font-size: 14px
+    }
+    .port-work {
+        margin-bottom: 15%
+    }
+    .container-image-a,
+    .container-image-b,
+    .container-image-c,
+    .container-image-d,
+    .container-image-e {
+        height: 150px;
+        width: 150px;
+        margin: 20px 4px
+    }
+    .layer-a h4,
+    .layer-b h4,
+    .layer-c h4,
+    .layer-d h4,
+    .layer-e h4 {
+        font-size: 12px;
+        padding-top: 20%
+    }
+    .text-center h2 {
+        font-size: 16px
+    }
+    .text-center h3 {
+        font-size: 16px;
+        margin-bottom: 5vh
+    }
+    .portfolio {
+        margin-top: 80px
+    }
+    .contact-top {
+        top: 15vh
+    }
+    .contact-top h2 {
+        font-size: 16px
+    }
+    .contact-left {
+        top: 18vh
+    }
+    .contact-left p {
+        font-size: 14px
+    }
+    .contact-left img {
+        height: 20px;
+        width: 20px
+    }
+    .contact-right {
+        top: 20vh;
+    }
+    #city h3 {
+        font-size: 16px;
+    }
+    #city h4 {
+        font-size: 15px;
+    }
+}
+
+/* Max-width 576px */
+
+@media screen and (max-width:576px) {
+    #overlay-menu a {
+        font-size: 16px;
+        padding: 1px;
+    }
+    #close {
+        font-size: 35px;
+        right: 25px;
+        top: 12px
+    }
+    #main-text {
+        margin-top: 10%
+    }
+    #main-text h1 {
+        font-size: 24px
+    }
+    #main-text h3 {
+        font-size: 18px
+    }
+    #main-animate {
+        font-size: 19px
+    }
+    .portfolio {
+        margin-top: 80px
+    }
+    .port-work {
+        margin-bottom: 1%
+    }
+    .porto-text {
+        margin-top: 0
+    }
+    .container-image-a,
+    .container-image-b,
+    .container-image-c,
+    .container-image-d,
+    .container-image-e {
+        height: 80px;
+        width: 80px;
+        margin: 20px 4px
+    }
+    .layer-a h4,
+    .layer-b h4,
+    .layer-c h4,
+    .layer-d h4,
+    .layer-e h4 {
+        font-size: 8px;
+        padding-top: 15%
+    }
+    .text-center h2 {
+        font-size: 14px
+    }
+    .text-center h3 {
+        font-size: 14px
+    }
+    .contact-top {
+        top: 18vh
+    }
+    .contact-right {
+        top: 16vh;
+    }
+    #city h3 {
+        font-size: 14px;
+    }
+    #city h4 {
+        font-size: 13px;
+    }
+}
+
+/* Max-height 480px */
+
+@media screen and (max-height:480px) {
+    .about-left h3 {
+        font-size: 12px
+    }
+    .about-left p {
+        font-size: 10px
+    }
+    .about-right h3 {
+        font-size: 12px
+    }
+    .about-right p {
+        font-size: 10px
+    }
+    .container-image-a,
+    .container-image-b,
+    .container-image-c,
+    .container-image-d,
+    .container-image-e {
+        height: 70px;
+        width: 70px;
+        margin: 4px
+    }
+    .layer-a h4,
+    .layer-b h4,
+    .layer-c h4,
+    .layer-d h4,
+    .layer-e h4 {
+        font-size: 7px;
+        padding-top: 15%
+    }
+    .contact-left {
+        top: 12vh
+    }
+    .contact-left p {
+        font-size: 10px
+    }
+    .contact-right {
+        display: none;
+    }
+}
+
+/* Min-width 1080px */
+
+@media screen and (min-width: 1080px) {
+    .contact-right {
+        width: 50%;
+    }
+}
